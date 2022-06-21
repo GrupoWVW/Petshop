@@ -1,0 +1,337 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+    color: #8b0000;
+    color: #d3d3d3;
+    --blue: #00285f;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;  
+    height: 500px;
+    background-color: #8B0000;
+}
+
+.content {
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+nav {   
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 24px;
+    color: #d3d3d3;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row; /*deixando os marcadores (lista não ordenada em linha)*/
+}
+
+nav ul li {
+    list-style: none; /*tirando as bolinhas dos marcadores (lista não ordenada)*/
+    padding: 10px; /*separando os marcadores*/
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: #d3d3d3; /*cor dos marcadores*/
+    text-decoration: none; /*tirando o underline*/
+}
+
+nav ul li a:hover {
+    color: #00285f; /*mudando a cor do marcador ao passar o mouse em cima*/
+}
+
+nav ul button {
+    border: 1px solid #d3d3d3; /*borda*/
+    background: transparent; /*fundo transparente*/
+    padding: 10px 35px; /*distancia do nome para as bordas*/
+    cursor: pointer; 
+    margin-left: 10px; /*distancia do marcador a esquerda*/
+    color: #d3d3d3; /*cor do texto*/
+    font-weight: bolder; /*fonte negrito*/
+    border-radius: 3px; /*arredondando a borda*/     
+}
+
+nav ul button:hover { /*mudança de aspecto quando o cursor passa pelo botão*/
+    background: white; /*cor do texto com a interação*/
+    color: #00285f; /*cor do fundo com a interação*/
+    transition: background, color 0.6s; /*transição*/
+}
+
+.content .header-block {
+    max-width: 1000px; /*largura máxima*/
+    min-width: 300px; /*largura mínima*/
+    height: 425px; /*altura máxima*/
+    background: #00285f; /*cor do fundo*/
+    border-radius: 8px; /*arredondando a borda*/
+    padding: 10px; /*distancia da borda*/
+    position: relative; /*ajustes relativos dentro do bloco*/
+}
+
+.header-block img { 
+    width: 40%;
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
+
+.header-block .text {
+    position: absolute;
+    bottom: 70%;
+    left: 05%;
+}
+
+.header-block .text h2 {   
+    color:white;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.header-block .text p {
+    max-width: 280px;
+    color: white;
+    text-align: right;
+}
+
+/* Produtos */
+
+section .produtos {
+    width: 100vw; /*larguda de 100% da tela*/
+    padding: 100px; /*distancia*/
+}
+
+section .filter-card {
+    width: 980px;
+    height: 150px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.search-input {
+    width: 700px;
+    height: 50px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 10px;
+}
+
+.search-button {
+    width: 150px;  
+    height: 50px;
+    border-radius: 0px 4px 4px 0px;
+    border: none; 
+    background-color: #00285f;
+    color: white;
+    cursor: pointer;
+    font-size: 1.0em;
+}
+
+.search-button:hover {
+    background-color: white;
+    color: #00285f;
+    font-weight: bolder;
+    transition: background, color 0.6s;
+}
+
+.title-wrapper-produtos {
+    margin-top: 100px;
+    padding-bottom: 30px;
+    color: black;
+}
+
+section .card-wrapper {
+    max-width: 1000px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px;
+    padding-top: 50px;
+}
+
+section .card-item {
+    height: 400px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+} 
+
+.card-content {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+}
+
+.card-item img {
+    width: 90%;
+}
+
+.card-item h4 {
+    width: 90%;
+}
+
+.card-item p {
+    width: 90%;
+    font-style: italic;
+    color: #00000070;
+}
+
+.card-item button {
+    width: 100%;
+    padding: 15px 0px;
+    border: none;
+    background-color: #00285f;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.card-item button:hover {
+    background-color: white;
+    color: #00285f;
+    font-weight: bolder;
+    transition: background, color 0.6s;
+}
+
+/*Nossa empresa*/
+
+.nossaempresa { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+.nossaempresa-content { 
+    max-width: 1000px;
+    min-width: 300px;
+    height: 200px; 
+    background-color: #d3d3d33b;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-wrapper-nossaempresa h3 {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.title-wrapper-nossaempresa h3:hover {
+    color: #00000070;
+}
+
+.title-wrapper-nossaempresa p {
+    color: black;
+    font-style: italic;
+}
+.right h3 { 
+    text-align:justify;
+    width: 100%;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+/*Rodapé*/
+
+footer {
+    width: 100%;
+    height: 250px;
+}
+
+footer .main {
+    width: 100%;
+    height: 200px;
+    background-color: #8b0000;
+    padding: 20px 10px;
+}
+
+.footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-company, .footer-social, .footer-contato {
+    color: white;
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links h6 {
+    margin-bottom: 8px;
+}
+
+.main .footer-social img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+footer .last {
+    width: 100%;
+    height: 50px;
+    background-color: #00285f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
